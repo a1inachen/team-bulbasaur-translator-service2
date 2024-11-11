@@ -13,6 +13,9 @@ on:
       - f24
   workflow_dispatch:
 
+env:
+  AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -35,9 +38,6 @@ jobs:
 
       - name: Install open ai
         run: pip install --quiet openai
-
-      - name: install python dotenv
-        run: pip install python-dotenv
 
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       - name: Zip artifact for deployment
