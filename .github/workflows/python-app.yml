@@ -13,7 +13,7 @@ permissions:
   contents: read
 
 env:
-  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+  AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
 
 jobs:
   build:
@@ -32,6 +32,7 @@ jobs:
         pip install flake8 pytest
         pip install -U sentence-transformers
         pip install --quiet openai
+        pip install python-dotenv
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
