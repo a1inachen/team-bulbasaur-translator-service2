@@ -2,8 +2,6 @@ from openai import AzureOpenAI
 import string
 import os
 # from dotenv import load_dotenv
-
-
 # load_dotenv()
 
 client = AzureOpenAI (
