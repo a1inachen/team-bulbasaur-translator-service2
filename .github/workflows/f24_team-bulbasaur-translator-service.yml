@@ -13,9 +13,6 @@ on:
       - f24
   workflow_dispatch:
 
-env:
-  api_key: ${{ secrets.AZURE_OPENAI_API_KEY }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
