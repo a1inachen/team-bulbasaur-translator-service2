@@ -3,12 +3,11 @@ import string
 import os
 from dotenv import load_dotenv
 
+
 load_dotenv()
 
-API_KEY = os.getenv("API_KEY")
-
 client = AzureOpenAI (
-        api_key = API_KEY,
+        api_key = os.getenv('API_KEY'),
         api_version="2024-02-15-preview",
         azure_endpoint="https://team-bulbasaur.openai.azure.com/"
     )
